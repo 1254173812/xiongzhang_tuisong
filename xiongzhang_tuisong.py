@@ -5,6 +5,7 @@ def xiongzhang():
     url="http://data.zz.baidu.com/urls?appid=%s&token=%s&type=%s"%(appid,token,type)  #接口调用地址 熊掌号-资讯提交页面获取
     filecontents={'file':open('urls.txt','r')}  #urls.txt里是需要推送的URL文件，每行一个
     r=requests.post(url,files=filecontents)
+    r=requests.post(post_url,data=tuisong_urls)  #如果有一个列表为urls则tuisong_urls='\n'.join(urls)  #把这个列表中所有的URL以换行做分隔。
     result=u'\n推送成功,结果为:%s\n'%r.text.decode('utf8')
     print result
 
