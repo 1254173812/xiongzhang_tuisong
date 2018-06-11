@@ -1,0 +1,2 @@
+# xiongzhang_tuisong
+python编写熊掌号资源批量提交工具，熊掌号资源推送工具
